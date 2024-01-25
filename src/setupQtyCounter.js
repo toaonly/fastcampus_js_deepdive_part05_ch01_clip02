@@ -17,7 +17,7 @@ export default function setupQtyCounter() {
             class="flex items-center justify-center w-8 h-8 p-2 rounded-sm bg-red-400 hover:bg-red-500 text-white text-lg">-</button>
         </div>
         <div>
-          <span id="qty">0</span>
+          <span id="qty" class="inline-block w-10 text-center">0</span>
         </div>
         <div>
           <button
@@ -31,9 +31,14 @@ export default function setupQtyCounter() {
   </div>
 `
 
-  const qty = document.querySelector('#qty') // 수량을 표시할 태그
-  const btns = [document.querySelector('#btn-decrease'), document.querySelector('#btn-increase')] // 감소, 증가 버튼
-  let qtyValue = 0 // 수량
+  // 수량을 표시할 태그
+  const qty = document.querySelector('#qty')
+
+  // 감소, 증가 버튼
+  const btns = [document.querySelector('#btn-decrease'), document.querySelector('#btn-increase')]
+
+  // 수량을 저장할 변수
+  let qtyValue = 0
 
   btns.forEach(btn => {
     btn.addEventListener('click', () => {
