@@ -17,11 +17,7 @@ export default function setupQtyCounter() {
             class="flex items-center justify-center w-8 h-8 p-2 rounded-sm bg-red-400 hover:bg-red-500 text-white text-lg">-</button>
         </div>
         <div>
-          	<input
-              id="qty"
-              type="text"
-              value="0"
-              class="w-10 h-auto text-center border-b-2 border-sky-400" />
+          <span id="qty" class="inline-block w-10 text-center">0</span>
         </div>
         <div>
           <button
